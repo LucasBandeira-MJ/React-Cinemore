@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaPlus, FaChair } from 'react-icons/fa'
+import { FaPlus, FaChair, FaChevronUp } from 'react-icons/fa'
 
 const Movie = ({details}) => {
     const [showInfo, setShowInfo] = useState(false)
@@ -17,6 +17,12 @@ const Movie = ({details}) => {
         setShowSeats(true)
     }
 
+    const handleHide = () => {
+        setShowInfo(false)
+        setShowSeats(false)
+
+    }
+
     return (
         <div className="movie-box">
             <div className="movie-poster">
@@ -30,10 +36,19 @@ const Movie = ({details}) => {
                 <h3>{details.duration}</h3>
                 <h3>Sinopsis:</h3>
                 <p>{details.sinopsis}</p>
+
+                <FaChevronUp onClick={handleHide} className="hide-icon" />
             </div>
 
             <div className={`movie-sessions ${showSeats? 'active': ''}`}>
                 <a href="#">9:00</a>
+                <a href="#">9:00</a>
+                <a href="#">9:00</a>
+                <a href="#">9:00</a>
+                <a href="#">9:00</a>
+                <a href="#">9:00</a>
+
+                <FaChevronUp onClick={handleHide} className="hide-icon" />
             </div>
         </div>
     )
