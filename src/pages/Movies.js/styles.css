@@ -1,0 +1,44 @@
+.container {
+    background: #fff;
+    width: 95%;
+    max-width: 1200px;
+    border-radius: 5px;
+    text-align: center;
+}
+.movie-box {
+    border-top: 5px solid #7159c1;
+    position: relative;
+}
+
+.movie-poster {
+    width: 100%;
+    min-height: 250px;
+    background-color: #a9a9a9;
+    position: relative;
+}
+
+.movie-info, .movie-sessions {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.movie-info.active, .movie-sessions.active {
+    height: auto;
+    opacity: 1;
+    padding: 5px 0;
+}
+
+.expand-icon, .seat-icon {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 22px;
+}
+
+.seat-icon {
+    right: 10px;
+    left: auto;
+}
+
