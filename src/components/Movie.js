@@ -26,7 +26,7 @@ const Movie = ({details}) => {
     return (
         <div className="movie-box">
             <div className="movie-poster">
-                
+                <img className="poster" src={`https://www.themoviedb.org/t/p/w780${details.backdrop_path}`} />
             <FaPlus className="expand-icon" onClick={handleExpand} />
             <FaChair className="seat-icon" onClick={handleSeats} />
             </div>
@@ -35,7 +35,7 @@ const Movie = ({details}) => {
                 <h3>{details.title}</h3>
                 <h3>{details.duration}</h3>
                 <h3>Sinopsis:</h3>
-                <p>{details.sinopsis}</p>
+                <p>{details.overview}</p>
 
                 <FaChevronUp onClick={handleHide} className="hide-icon" />
             </div>
