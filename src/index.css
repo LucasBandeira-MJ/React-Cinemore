@@ -8,6 +8,9 @@
 
 body {
   background-color: #000;
+  background-image: url('./assets/img/background.jpg');
+  background-position: center;
+  background-attachment: fixed;
 }
 #root {
   display: flex;

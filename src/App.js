@@ -1,16 +1,12 @@
-import { useState } from 'react'
-
 import AppHeader from './components/AppHeader'
-import Movies from './pages/Movies.js'
+import Home from './pages/Home'
 
 function App() {
-
-  const [example, setExample] = useState();
 
   return (
     <>
     <AppHeader />
-    <Movies />
+    <Home />
     </>
   );
 }
