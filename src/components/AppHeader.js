@@ -14,7 +14,11 @@ const styles = {
             backgroundColor: '#000',
             color: '#7159c1',
             width: '100%',
-            padding: '5px 0 10px'
+            padding: '5px 0 10px',
+            position: 'fixed',
+            top: '0',
+            zIndex: '999',
+            height: '45px',
         },
         nav: {
             width: '100%',

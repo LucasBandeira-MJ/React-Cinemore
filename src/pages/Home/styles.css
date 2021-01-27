@@ -1,14 +1,21 @@
+:root {
+    --purp: #7159c1;
+  }
+
 .container {
     width: 100%;
-    background: #1f1f1f;
+    background: var(--purp);
     max-width: 1280px;
     overflow: hidden;
 }
 .featured-movie {
+    background-color: #fff;
     width: 100%
 }
 .featured-container {
     position: relative;
+    max-height: 80vh;
+    overflow: hidden;
 }
 
 .featured-container img {
@@ -21,18 +28,74 @@
     top: 0;
     left:0;
 }
-.featured-title {
+
+.featured-description{
     position: absolute;
-    bottom: 15px;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
     width: 100%;
-    text-align: center;
-    color: #7159c1;
-    text-shadow: 1px 1px black;
-    font-size: 3vw;
-    font-weight: bold;
-    padding: 20px 0 10px;
+    height: 100%;
 }
 
+.featured-title {
+    font-size: 28px;
+    color: #fff;
+    padding-left: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+}
+.featured-overview {
+    visibility: hidden;
+    padding-left: 10px;
+    width: 50%;
+    position: absolute;
+    bottom: 15px;
+}
+.tickets {
+    color: var(--purp);
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #fff;
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 50%;
+    box-sizing: initial;
+    cursor: pointer;
+}
+.sessions-box {
+    width: 100%;
+    background-color: #fff;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+    max-width: 800px;
+    margin: auto;
+    height: 0;
+    display: flex;
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+.sessions-box.active {
+    height: auto;
+    visibility: visible;
+    padding: 10px;
+    opacity: 1;
+}
+.session {
+    background: var(--purp);
+    padding: 5px 15px;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    font-size: 18px;
+}
 
 .movieSlider {
     display: flex;
@@ -50,13 +113,29 @@
     bottom: 0;
     left: 0;
     font-weight: bold;
-    width: 100%;
+    width: 300px;
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.9) 100%);
-    padding: 5px 5px 15px;
-    bottom: -50px;
-    transition: 0.5s ease;
+    padding: 5px 5px 10px;
 }
 .movie:hover > .movie-title {
     bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .featured-title {
+        font-size: 2.5rem;
+    }
+    .featured-overview {
+        visibility: visible;
+    }
+}
+
+@media only screen and (min-width: 1260px) {
+    .featured-title {
+        font-size: 3.5rem;
+    }
+    .featured-overview {
+        font-size: 1.5rem;
+    }
 }
