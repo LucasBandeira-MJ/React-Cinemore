@@ -1,12 +1,14 @@
 import AppHeader from './components/AppHeader'
 import Home from './pages/Home'
+import Seats from './pages/Seats'
 
 function App() {
 
   return (
     <>
     <AppHeader />
-    <Home />
+    {/* <Home /> */}
+    <Seats />
     </>
   );
 }
